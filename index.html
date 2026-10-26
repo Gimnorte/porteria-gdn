@@ -2,30 +2,52 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Control de Accesos - Portería GDN</title>
   <style>
-    html, body { 
-      margin: 0; 
-      padding: 0; 
-      height: 100%; 
-      overflow: hidden; 
-      background-color: #f8f9fa; 
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
     }
-    iframe { 
-      width: 100%; 
-      height: 100vh; 
-      border: none; 
-      display: block; 
+    .btn-acceso {
+      background-color: #0d6efd;
+      color: white;
+      padding: 18px 30px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-decoration: none;
+      margin-top: 15px;
     }
   </style>
 </head>
 <body>
-  <!-- Asegúrate de cambiar la URL por tu enlace /exec real de Apps Script -->
-  <iframe 
-    src="https://script.google.com/macros/s/AKfycbyQsYzWSaxfzS4li-5oR7eFIcqghVQlQmXUuDzYlDp6qiEW5_l_Kt8Qt_Iy4H-45C1HAg/exec"
-    allow="camera *; microphone *; autoplay; clipboard-write; encrypted-media; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+
+  <h2>Control de Accesos GDN</h2>
+  <p>Redireccionando al sistema de portería...</p>
+
+  <!-- Botón por si el celular no redirecciona automáticamente -->
+  <a id="linkApp" href="#" class="btn-acceso">Abrir Portería</a>
+
+  <script>
+    // PEGA AQUÍ TU ENLACE REAL DE APPS SCRIPT TERMINADO EN /exec
+    const urlAppsScript = "https://script.google.com/macros/s/AKfycbyQsYzWSaxfzS4li-5oR7eFIcqghVQlQmXUuDzYlDp6qiEW5_l_Kt8Qt_Iy4H-45C1HAg/exec";
+
+    document.getElementById("linkApp").href = urlAppsScript;
+
+    // Redirección automática
+    window.location.href = urlAppsScript;
+  </script>
+
 </body>
 </html>
